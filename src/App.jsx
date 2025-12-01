@@ -1248,4 +1248,87 @@ const primaryButton = {
   border: "none",
   background: "#3778FF",
   color: "white",
-  padding:
+  padding: "10px 18px",
+  fontSize: 16,
+  fontWeight: 600,
+};
+
+const secondaryButton = {
+  borderRadius: 999,
+  border: "1px solid rgba(148,163,184,0.6)",
+  background: "transparent",
+  color: "#e5e7eb",
+  padding: "10px 18px",
+  fontSize: 16,
+  fontWeight: 500,
+};
+
+const ghostButton = {
+  borderRadius: 999,
+  border: "1px solid rgba(148,163,184,0.5)",
+  background: "transparent",
+  color: "#e5e7eb",
+  padding: "8px 14px",
+  fontSize: 14,
+};
+
+const successButton = {
+  borderRadius: 999,
+  border: "none",
+  background: "#22c55e",
+  color: "white",
+  padding: "8px 16px",
+  fontSize: 14,
+  fontWeight: 600,
+};
+
+const dangerButton = {
+  borderRadius: 999,
+  border: "none",
+  background: "#ef4444",
+  color: "white",
+  padding: "8px 16px",
+  fontSize: 14,
+  fontWeight: 600,
+};
+
+const optionButton = {
+  borderRadius: 12,
+  border: "1px solid rgba(148,163,184,0.4)",
+  background: "#020617",
+  color: "white",
+  padding: "10px 12px",
+  fontSize: 16,
+  textAlign: "left",
+};
+
+const inputStyle = {
+  padding: "10px 12px",
+  borderRadius: 10,
+  border: "1px solid rgba(148,163,184,0.7)",
+  background: "#020617",
+  color: "white",
+  fontSize: 16,
+  width: "100%",
+  maxWidth: 420,
+};
+
+const smallGhost = {
+  borderRadius: 999,
+  border: "1px solid rgba(148,163,184,0.6)",
+  background: "transparent",
+  color: "#e5e7eb",
+  padding: "4px 8px",
+  fontSize: 12,
+};
+
+const smallDanger = {
+  borderRadius: 999,
+  border: "1px solid rgba(248,113,113,0.8)",
+  background: "rgba(127,29,29,1)",
+  color: "#fecaca",
+  padding: "4px 8px",
+  fontSize: 12,
+};
+
+export default App;
