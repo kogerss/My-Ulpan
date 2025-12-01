@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тест Supabase</title>
+</head>
+<body>
+    <h1>Тест подключения к Supabase</h1>
+    <div id="result">Проверяем...</div>
+    
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://uyojzeqovrpfrzsuwsys.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV5b2p6ZXFvdnJwZnJ6c3V3c3lzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ0MTQzNjcsImV4cCI6MjA3OTk5MDM2N30.Mx302lQNo7KG8tQRppQn6IWkOGVgwnCL1h7H5f1__J0';
+        
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+        
+        async function testConnection() {
+            try {
+                const { data, error } = await supabase
+                    .from('words')
+                    .select('*')
+                    .limit(2);
+                    
+                if (error) {
+                    document.getElementById('result').innerHTML = 
+                        'Ошибка: ' + error.message;
+                    console.error('Ошибка:', error);
+                } else {
+                    document.getElementById('result').innerHTML = 
+                        'Успех! Найдено слов: ' + data.length + 
+                        '<br>Первое слово: ' + JSON.stringify(data[0]);
+                    console.log('Данные:', data);
+                }
+            } catch (err) {
+                document.getElementById('result').innerHTML = 
+                    'Критическая ошибка: ' + err.message;
+                console.error('Ошибка:', err);
+            }
+        }
+        
+        testConnection();
+    </script>
+</body>
+</html>
